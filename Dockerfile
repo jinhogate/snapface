@@ -6,12 +6,12 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-RUN npm run build --prod
+RUN npm run build --prod --output-path=dist/angular-client --base-href=/
 
 # Étape 2 : Serveur Nginx
 FROM nginx:alpine as production-stage
 
-COPY --from=build-stage /app/dist/snapface /usr/share/nginx/html
+COPY --from=build-stage /app/dist/angular-client /usr/share/nginx/html
 
 # Config Nginx personnalisée (routes Angular)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
