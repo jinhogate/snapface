@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Bienvenue sur le site de l\'école de la deuxième chance de Marseille';
+  title = 'Bienvenue jincode';
 }
