@@ -1,0 +1,25 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.useEditorConfig": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.wordWrap": "on",
+  "material-icon-theme.folders.color": "#42a5f5",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "ms-settings"
+  ],
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "prettier.useEditorConfig": false
+}
