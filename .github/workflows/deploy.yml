@@ -29,4 +29,4 @@ jobs:
 
     - name: Trigger Render deployment via webhook
       run: |
-        curl -X POST https://api.render.com/deploy/srv-d0m0foogjchc739dmgog?key=bjeD6_iH2OM
+        curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
