@@ -8,10 +8,12 @@ RUN npm install
 COPY . .
 RUN npm run build --prod --base-href=/
 
+# Vérification du contenu du build (debug)
+RUN echo "Contenu du dossier de build Angular :" && ls -lh dist/snapface
+
 # Étape 2 : Serveur Nginx
 FROM nginx:alpine as production-stage
 
-RUN ls -l /app/dist/snapface
 
 COPY --from=build-stage /app/dist/snapface /usr/share/nginx/html
 
