@@ -9,7 +9,7 @@ COPY . .
 RUN npm run build --prod --base-href=/
 
 # Vérification du contenu du build (debug)
-RUN echo "Contenu du dossier de build Angular :" && ls -lhr dist/snapface
+RUN echo "Contenu du dossier de build Angular :" && ls -lr dist/snapface
 
 # Étape 2 : Serveur Nginx
 FROM nginx:alpine as production-stage
