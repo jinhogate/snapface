@@ -11,6 +11,8 @@ RUN npm run build --prod --base-href=/
 # Étape 2 : Serveur Nginx
 FROM nginx:alpine as production-stage
 
+RUN ls -l /app/dist/snapface
+
 COPY --from=build-stage /app/dist/snapface /usr/share/nginx/html
 
 # Config Nginx personnalisée (routes Angular)
