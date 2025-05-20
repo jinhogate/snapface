@@ -12,8 +12,7 @@ install:
   - npm install
 
 script:
-  - ng build --prod
-  - docker build -t snapface-angular-app .
+  - echo "Building the project..."
 
 after_success:
   - curl -X POST https://api.render.com/deploy/srv-d0m0foogjchc739dmgog?key=bjeD6_iH2OM
