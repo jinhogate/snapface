@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { FaceSnapComponent } from "./face-snap/face-snap.component";
 
 @Component({
