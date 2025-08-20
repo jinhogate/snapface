@@ -1,4 +1,4 @@
-<div class="face-snap-card">
+<div [ngClass]="{ snapped: isSnapped }" class="face-snap-card">
   <h2>{{ faceSnap.title }}</h2>
   @if (faceSnap.location) {
   <p>Localisation: {{ faceSnap.location }}</p>
@@ -10,6 +10,9 @@
   <p>{{ faceSnap.description }}</p>
   <p>
     <button (click)="onSnap()">{{ this.nomBouton }}</button>
-    🤌 {{ faceSnap.snaps }}
+    🤌
+    <span [ngStyle]="{ color: 'rgb(0,' + faceSnap.snaps + ',0)' }">
+      {{ faceSnap.snaps }}
+    </span>
   </p>
 </div>
