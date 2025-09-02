@@ -6,7 +6,9 @@
   <p>Localisation non spécifiée</p>
   }
   <img [src]="faceSnap.image" [alt]="faceSnap.title" />
-  <p>Mis en ligne le {{ faceSnap.createdAt }}</p>
+  <p>
+    Mis en ligne le {{ faceSnap.createdAt | date : "d MMMM yyyy, à HH:mm" }}
+  </p>
   <p>{{ faceSnap.description }}</p>
   <p>
     <button (click)="onSnap()">{{ this.nomBouton }}</button>
